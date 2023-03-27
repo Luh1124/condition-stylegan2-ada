@@ -1,0 +1,1 @@
+python train.py --outdir=training-runs --data=/home/momobot/repo/data/faceset/unwarp_texture --gpus=8 --metrics=None --cfg=paper256

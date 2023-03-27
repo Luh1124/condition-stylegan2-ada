@@ -51,7 +51,7 @@ def is_image_ext(fname: Union[str, Path]) -> bool:
 
 def open_image_folder(source_dir, *, max_images: Optional[int]):
     # input_images = [str(f) for f in sorted(Path(source_dir).rglob('*')) if is_image_ext(f) and os.path.isfile(f)]
-    input_images = [str(f) for f in sorted(Path(source_dir).rglob('*')) if is_image_ext(f) and os.path.isfile(f) and f.split(os.sep)[-3]=="unwarp_texture"]
+    input_images = [str(f) for f in sorted(Path(source_dir).rglob('*')) if is_image_ext(f) and os.path.isfile(f) and f.parts[-3]=="unwarp_texture"]
 
     # Load labels.
     labels = {}
